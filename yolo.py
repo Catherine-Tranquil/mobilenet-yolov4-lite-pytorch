@@ -26,10 +26,10 @@ from utils.utils import (DecodeBox, bbox_iou, letterbox_image,
 #--------------------------------------------#
 class YOLO(object):
     _defaults = {
-        "model_path"        : 'model_data/yolov4_mobilenet_v1_voc.pth',
+        "model_path"        : 'model_data/yolov4_mobilenet_v2_voc.pth',
         "anchors_path"      : 'model_data/yolo_anchors.txt',
-        "classes_path"      : 'model_data/voc_classes.txt',
-        "backbone"          : 'mobilenetv1',
+        "classes_path"      : 'model_data/custom_classes.txt',
+        "backbone"          : 'mobilenetv2',
         "model_image_size"  : (416, 416, 3),
         "confidence"        : 0.5,
         "iou"               : 0.3,
