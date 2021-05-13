@@ -135,7 +135,7 @@ if __name__ == "__main__":
     #   mobilenetv2
     #   mobilenetv3
     #-------------------------------#
-    backbone = "mobilenetv1"
+    backbone = "mobilenetv2"
     #-------------------------------#
     #   是否使用主干网络的预训练权重
     #-------------------------------#
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     #   训练前一定要修改classes_path，使其对应自己的数据集
     #----------------------------------------------------#
     anchors_path = 'model_data/yolo_anchors.txt'
-    classes_path = 'model_data/voc_classes.txt'   
+    classes_path = 'model_data/custom_classes.txt'   
     #----------------------------------------------------#
     #   获取classes和anchor
     #----------------------------------------------------#
@@ -194,7 +194,7 @@ if __name__ == "__main__":
     #------------------------------------------------------#
     #   权值文件请看README，百度网盘下载
     #------------------------------------------------------#
-    model_path = "model_data/yolov4_mobilenet_v1_voc.pth"
+    model_path = "model_data/yolov4_mobilenet_v2_voc.pth"
     # 加快模型训练的效率
     print('Loading weights into state dict...')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
