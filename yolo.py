@@ -26,7 +26,7 @@ from utils.utils import (DecodeBox, bbox_iou, letterbox_image,
 #--------------------------------------------#
 class YOLO(object):
     _defaults = {
-        "model_path"        : 'model_data/yolov4_mobilenet_v2_voc.pth',
+        "model_path"        : 'model_data/Epoch50-Total_Loss2.3232-Val_Loss2.4210.pth',
         "anchors_path"      : 'model_data/yolo_anchors.txt',
         "classes_path"      : 'model_data/custom_classes.txt',
         "backbone"          : 'mobilenetv2',
