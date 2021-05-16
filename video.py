@@ -19,6 +19,10 @@ capture=cv2.VideoCapture("drive.mp4")
 #-------------------------------------#
 #capture=cv2.VideoCapture(0)
 fps = 0.0
+fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+fps = int(capture.get(cv2.CAP_PROP_FPS))
+video = cv2.VideoWriter('result.mp4', fourcc, fps, (1920, 1080))
+
 while(capture.isOpened()):
     t1 = time.time()
     # 读取某一帧
@@ -40,9 +44,7 @@ while(capture.isOpened()):
 
     # cv2.imshow("video",frame)
 
-    fourcc = cv2.VideoWriter_fourcc(*"MJPG")
-    fps = int(capture.get(cv2.CAP_PROP_FPS))
-    video = cv2.VideoWriter('result.mp4', fourcc, fps, (1920, 1080))
+    
     video.write(frame)
 
     if cv2.waitKey(fps) == 27:
