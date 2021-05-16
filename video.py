@@ -47,10 +47,10 @@ while(capture.isOpened()):
     
     video.write(frame)
 
-    if cv2.waitKey(int(fps)) == 27:
-        break
-    #c= cv2.waitKey(1) & 0xff
-    #if c==27:
-    #  break
+    #if cv2.waitKey(int(fps)) == 27:
+    #    break
+    c= cv2.waitKey(1) & 0xff
+    if c==27:
+      break
 capture.release()
 video.release()
