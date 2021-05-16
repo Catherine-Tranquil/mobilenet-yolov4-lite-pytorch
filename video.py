@@ -19,7 +19,7 @@ capture=cv2.VideoCapture("drive.mp4")
 #-------------------------------------#
 #capture=cv2.VideoCapture(0)
 fps = 0.0
-fourcc = cv2.VideoWriter_fourcc(*"MJPG")
+fourcc = cv2.VideoWriter_fourcc(*"mp4v")
 fps = int(capture.get(cv2.CAP_PROP_FPS))
 video = cv2.VideoWriter('result.mp4', fourcc, fps, (1920, 1080))
 
@@ -47,9 +47,10 @@ while(capture.isOpened()):
     
     video.write(frame)
 
-    if cv2.waitKey(fps) == 27:
+     if cv2.waitKey(int(fps)) == 27:
         break
-    # c= cv2.waitKey(1) & 0xff
+    #c= cv2.waitKey(1) & 0xff
     #if c==27:
+    #  break
 capture.release()
 video.release()
